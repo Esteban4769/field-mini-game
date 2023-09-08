@@ -1,0 +1,78 @@
+$cell-size: 45px;
+
+.field-game-app {
+  padding: 40px;
+  min-height: 100vh;
+  height: fit-content;
+
+  box-sizing: border-box;
+
+  background-color: #7393B3;
+
+  &__title {
+    font-weight: 500;
+  }
+
+  &__start-button {
+    height: 54px;
+
+    font-size: 20px;
+  }
+
+  &__timeout-form {
+    display: flex;
+
+    gap: 20px;
+  }
+
+  &__game-score {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2px;
+
+    margin-bottom: 30px;
+  }
+
+  &__game-score-text {
+    margin: 0;
+  }
+
+
+  &__field {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(10, $cell-size);
+    gap: 5px;
+
+    margin: auto;
+    max-width: fit-content;
+    max-height: fit-content;
+    padding: 10px;
+
+    background-color: azure;
+    border-radius: 5px;
+  }
+
+  &__field-cell {
+    width: $cell-size;
+    height: $cell-size;
+
+    background-color: #0096FF;
+    border-radius: 5px;
+
+    &--active {
+      background-color: #FFC300;
+    }
+
+    &--clicked {
+      background-color: #228B22;
+    }
+
+    &--lost {
+      background-color: red;
+    }
+  }
+}
+
+
